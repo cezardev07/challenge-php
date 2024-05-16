@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: #fff;
+  color: #121212;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  background: #ddd;
+  padding: 20px;
+}
+
+header .wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .wrapper .logo a{
+  text-decoration: none;
+  color: #121212;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+header .wrapper nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header .wrapper nav a{
+  text-decoration: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #121212;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+
+header .wrapper nav a:hover{
+  background: #fff;
+  color: #121212;
+}
+
+header .wrapper nav input{
+  height: 38px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background: white;
+}
+
+main{
+  flex: 1;
+  background: #dddddd78;
+  padding: 0px 20px;
+}
+
+main article{
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: showCard 1s ease;
+}
+
+main article .title{
+  border-radius: 5px;
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+main article .title button{
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+main article .content{
+  background: white;
+  padding: 20px;
+  white-space: pre-line;
+  border-radius: 5px;
+}
+
+main section{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 0px;
+}
+
+main section .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  min-height: 248px;
+  animation: showCard 1s ease;
+}
+
+main section .card.none{
+  display: none !important;
+}
+
+main section .card .header-card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main section .card .header-card h2{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main section .card .header-card p{
+  max-height: 126px;
+  white-space: pre-line;
+  overflow-y: auto;
+}
+
+main section .card .header-card .category span{
+  padding: 5px;
+  border-radius: 5px;
+  background: #dddddd78;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+main section .card .button-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main section .card .button-card a{
+  padding: 10px 30px;
+  cursor: pointer;
+  text-decoration: none;
+  background: #ddd;
+  color: #121212;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+
+main section .card .button-card a:hover{
+  background: #cccccc;
+  color: #121212;
+}
+
+main form{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 40px;
+  background: #fff;
+  animation: showCard 1s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+main form input {
+  padding: 10px;
+  height: 45px;
+}
+
+main form textarea{
+  min-height: 150px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+main form .wrapper-button-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main form .wrapper-button-form button{
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+footer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ddd;
+}
+
+footer h2{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@keyframes showCard {
+  0%{
+    opacity: -1;
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

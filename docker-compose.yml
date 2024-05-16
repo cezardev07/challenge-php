@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: data_news
+    ports:
+      - 5432:5432
+    volumes:
+      - ./sql/table.sql:/docker-entrypoint-initdb.d/table.sql
